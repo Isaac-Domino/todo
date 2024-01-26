@@ -53,11 +53,17 @@ const todo = () => {
           {_todos.isLoading &&
             Array(3)
               .fill(0)
-              .map((_, i) => <Skeleton className="w-full h-24" />)}
+              .map((_, i) => (
+                <Skeleton key={`item_loading_${i}`} className="w-full h-24" />
+              ))}
 
           {_todos.isSuccess &&
             _todos.data.map((todo) => (
-              <TodoCard refetchData={_todos.refetch} data={todo} />
+              <TodoCard
+                key={`todo_${todo.id}`}
+                refetchData={_todos.refetch}
+                data={todo}
+              />
             ))}
         </div>
       </main>
