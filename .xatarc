@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://benchmark-qo8mrn.ap-southeast-2.xata.sh/db/basic-todo",
+  "codegen": {
+    "output": "src/lib/xata.ts"
+  }
+}
