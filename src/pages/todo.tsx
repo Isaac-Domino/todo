@@ -21,7 +21,7 @@ import { useQuery } from "@tanstack/react-query";
 import { MoreHorizontalIcon } from "lucide-react";
 import React from "react";
 
-const todo = () => {
+const TodoPage = () => {
   const { isLoaded, user } = useUser();
 
   const _todos = useQuery({
@@ -71,4 +71,4 @@ const todo = () => {
   );
 };
 
-export default todo;
+export default TodoPage;
