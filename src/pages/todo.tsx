@@ -23,6 +23,7 @@ import React from "react";
 
 const TodoPage = () => {
   const { isLoaded, user } = useUser();
+  console.log(user);
 
   const _todos = useQuery({
     queryKey: ["todos.all"],
@@ -37,6 +38,9 @@ const TodoPage = () => {
       return data as Todo[];
     },
     refetchOnWindowFocus: false,
+    refetchOnMount: false,
+    networkMode: "offlineFirst",
+    enabled: !!user?.emailAddresses[0].emailAddress,
   });
 
   return (

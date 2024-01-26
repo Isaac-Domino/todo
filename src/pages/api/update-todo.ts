@@ -12,8 +12,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     await client.db.todo.update(body.id, body.todo);
     res.status(200).json({ message: "Todo updated" });
   } catch (error) {
-    console.log(error);
-
     res.status(500).json({ messsage: "Todo failed to update" });
   }
 
