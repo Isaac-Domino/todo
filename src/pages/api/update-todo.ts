@@ -14,10 +14,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   } catch (error) {
     res.status(500).json({ messsage: "Todo failed to update" });
   }
-
-  return res.json({
-    message: "Hello World",
-  });
 };
 
 export default handler;

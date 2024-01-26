@@ -14,10 +14,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   } catch (error) {
     res.status(500).json({ messsage: "Todo failed to fetch" });
   }
-
-  return res.json({
-    message: "Hello World",
-  });
 };
 
 export default handler;
