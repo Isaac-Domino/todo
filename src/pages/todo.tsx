@@ -39,8 +39,6 @@ const TodoPage = () => {
     refetchOnWindowFocus: false,
   });
 
-  console.log(_todos);
-
   return (
     <>
       <main className="py-10">
